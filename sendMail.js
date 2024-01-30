@@ -10,8 +10,8 @@ exports.generateEmail = async (subject, body, cc, to) => {
         port: 587,
         auth: {
             // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-            user: process.env.SMTP_EMAIL,
-            pass: process.env.SMTP_PASSWORD,
+            user: "sameembbs@gmail.com",
+            pass: "lydl dnse jdhq vrcq",
         },
     })
 
