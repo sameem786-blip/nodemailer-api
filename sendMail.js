@@ -10,13 +10,13 @@ exports.generateEmail = async (subject, body, cc, to) => {
         port: 587,
         auth: {
             // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-            user: "sameembbs@gmail.com",
-            pass: "lydl dnse jdhq vrcq",
+            user: process.env.SMTP_EMAIL,
+            pass: process.env.SMTP_PASSWORD,
         },
     })
 
     const info = await transporter.sendMail({
-        from: `"ZicoArt 👻" <${process.env.SMTP_EMAIL}>`, // sender address
+        from: `"Naukri Dedo Pls 👻" <${process.env.SMTP_EMAIL}>`, // sender address
         to: to, // list of receivers
         subject: subject, // Subject line
         html: body, // html body
